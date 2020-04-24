@@ -1,0 +1,132 @@
+@import 'global';
+
+body {
+    font-family: $primary-font;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.desktop-light-v {
+    background: $white-bg;
+}
+
+//BASIC HEADER STYLING
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.header-text{
+    h1 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0;
+        color: $dark-gray-blue;
+        font-weight: 700;
+        font-size: 1.6vh;
+    }
+}
+
+.header-button {
+    justify-self: end;
+    color: $dark-gray-blue;
+}
+
+// TOP CARDS SECTION
+.top-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3%;
+
+    div {
+        height: 230px;
+        border-radius: 5px;
+
+       p, h1, h2 {
+           text-align: center;
+       }
+
+       img {
+           vertical-align: middle;
+           margin-right: 1%;
+       }
+
+       p:first-child {
+           font-size: 1.5vh;
+           font-weight: 700;
+           padding-top: 7%;
+           color: $dark-gray-blue;
+       }
+
+       h1 {
+           font-size: 6vh;
+           margin-top: .4em;
+           margin-bottom: 0em;
+       }
+
+       h2 {
+           color: $dark-gray-blue;
+           text-transform: uppercase;
+           font-size: 1.5vh;
+           font-weight: 400;
+           letter-spacing: .4vw;
+           margin-top: 0;
+       }
+    }
+
+    .fb-card {
+        border-top: 5px solid $facebook;
+    }
+
+    .twitter-card {
+        border-top: 5px solid $twitter;
+    }
+
+    .ig-card{
+        padding-bottom: .7vh;
+    
+        &:before {
+            content: '';
+            background: $instagram;
+            position: absolute;
+            width: 18.1%;
+            height: .7%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+    }
+
+    .yt-card {
+        border-top: 5px solid $youtube;
+    }
+
+}
+
+.light-mode div{
+    background: $light-gray-blue;
+
+    h1 {
+        color: $very-dark-blue;
+    }
+}
+
+// GLOBAL UP RATINGS AND DOWN RATINGS STYLE 
+.up-rate {
+    color: $lime-green;
+    font-size: 1.5vh;
+    font-weight: 700;
+    margin-top: 12%;
+}
+
+.down-rate {
+    color: $bright-red;
+    font-size: 1.5vh;
+    font-weight: 700;
+    margin-top: 12%;
+}
+
+ 

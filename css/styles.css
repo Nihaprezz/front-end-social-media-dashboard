@@ -1,0 +1,130 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.desktop-light-v {
+  background: white;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-text h1 {
+  margin-bottom: 0;
+}
+
+.header-text p {
+  margin-top: 0;
+  color: #63687e;
+  font-weight: 700;
+  font-size: 1.6vh;
+}
+
+.header-button {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  color: #63687e;
+}
+
+.top-cards-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3%;
+}
+
+.top-cards-container div {
+  height: 230px;
+  border-radius: 5px;
+}
+
+.top-cards-container div p, .top-cards-container div h1, .top-cards-container div h2 {
+  text-align: center;
+}
+
+.top-cards-container div img {
+  vertical-align: middle;
+  margin-right: 1%;
+}
+
+.top-cards-container div p:first-child {
+  font-size: 1.5vh;
+  font-weight: 700;
+  padding-top: 7%;
+  color: #63687e;
+}
+
+.top-cards-container div h1 {
+  font-size: 6vh;
+  margin-top: .4em;
+  margin-bottom: 0em;
+}
+
+.top-cards-container div h2 {
+  color: #63687e;
+  text-transform: uppercase;
+  font-size: 1.5vh;
+  font-weight: 400;
+  letter-spacing: .4vw;
+  margin-top: 0;
+}
+
+.top-cards-container .fb-card {
+  border-top: 5px solid deepskyblue;
+}
+
+.top-cards-container .twitter-card {
+  border-top: 5px solid #1ca0f2;
+}
+
+.top-cards-container .ig-card {
+  padding-bottom: .7vh;
+}
+
+.top-cards-container .ig-card:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to right, #fdc468, #df4996);
+  position: absolute;
+  width: 18.1%;
+  height: .7%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.top-cards-container .yt-card {
+  border-top: 5px solid #c4032a;
+}
+
+.light-mode div {
+  background: #f0f2fa;
+}
+
+.light-mode div h1 {
+  color: #1e202a;
+}
+
+.up-rate {
+  color: #1db489;
+  font-size: 1.5vh;
+  font-weight: 700;
+  margin-top: 12%;
+}
+
+.down-rate {
+  color: #dc414c;
+  font-size: 1.5vh;
+  font-weight: 700;
+  margin-top: 12%;
+}
+/*# sourceMappingURL=styles.css.map */
