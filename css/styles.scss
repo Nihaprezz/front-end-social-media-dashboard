@@ -106,12 +106,73 @@ body {
 
 }
 
+//MIDDLE HEADER
+.middle-header {
+    padding-top: 2.7%;
+    padding-bottom: 1%;
+    font-size: 2.7vh;
+}
+
+// OVERVIEW CARDS SECTION
+.overview-cards-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3%;
+    grid-row-gap: 15%;
+    
+    .card {
+        padding: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 5px;
+
+        div:first-child {
+            p {
+                color: $dark-gray-blue;
+                font-weight: 700;
+                font-size: 1.5vh;
+                padding-bottom: 10%;   
+            }
+
+            span {
+                font-size: 3.3vh;
+                font-weight: 700;
+            }  
+        }
+
+        .card-rating {
+            display: grid;
+            justify-items: end;
+            align-items: center;
+
+            div {
+                align-self: end;
+
+                img {
+                    padding-top: 4%;
+                    vertical-align: middle;
+                }
+
+                span {
+                    font-size: 1.3vh;
+                }
+            }
+        }
+    }
+}
+
+// LIGHT MODE SPECIFIC CLASSES
 .light-mode div{
     background: $light-gray-blue;
 
     h1 {
         color: $very-dark-blue;
     }
+}
+
+.light-text {
+    color: $dark-gray-blue;
 }
 
 // GLOBAL UP RATINGS AND DOWN RATINGS STYLE 
