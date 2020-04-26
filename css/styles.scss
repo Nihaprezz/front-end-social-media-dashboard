@@ -191,3 +191,77 @@ body {
 }
 
  
+// TOGGLE BUTTON STYLES
+.tgl {
+	display: none;
+  
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 3.5em;
+		height: 1.7em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 43%;
+			height: 90%;
+		}
+    
+		&:after {
+            left: 2%;
+            top: 3%;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .tgl-btn:after {
+        left: 55%;
+        top: 3%;
+	}
+}
+
+// themes
+.tgl-light {
+	+ .tgl-btn {
+		background: $colorful-toggle;
+		border-radius: 2.5em;
+		padding: 2px;
+		transition: all .4s ease;
+		&:after {
+			border-radius: 50%;
+			background: $very-dark-blue;
+			transition: all .2s ease;
+        }
+	}
+  
+	&:checked + .tgl-btn {
+        background: $light-grey-toggle;
+        &:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+        }
+	}
+}
