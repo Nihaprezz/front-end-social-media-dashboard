@@ -4,10 +4,17 @@ body {
     font-family: $primary-font;
     margin-left: 10vw;
     margin-right: 10vw;
+    height: 100vh;
 }
 
 .desktop-light-v {
-    background: $white-bg;
+    background: linear-gradient(to top, white 75%, $very-pale-blue 70%);
+}
+
+.desktop-dark-v {
+    background: linear-gradient(to top, $very-dark-blue 75%, 
+    $very-dark-blue2 70%);
+    color: $white-bg;
 }
 
 //BASIC HEADER STYLING
@@ -30,9 +37,22 @@ body {
     }
 }
 
+//HEADER BUTTON
 .header-button {
     justify-self: end;
-    color: $dark-gray-blue;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    //TEXT NEXT TO TOGGLE BTN
+    .tgl-btn-text-light {
+        color: $dark-gray-blue;
+        font-weight: 700;
+        font-size: 1.5vh;
+        width: 110%;
+    }
 }
 
 // TOP CARDS SECTION
@@ -129,7 +149,6 @@ body {
 
         div:first-child {
             p {
-                color: $dark-gray-blue;
                 font-weight: 700;
                 font-size: 1.5vh;
                 padding-bottom: 10%;   
@@ -162,17 +181,45 @@ body {
     }
 }
 
-// LIGHT MODE SPECIFIC CLASSES
+// top-cards-section for light mode
 .light-mode div{
     background: $light-gray-blue;
 
     h1 {
         color: $very-dark-blue;
     }
+
+    div p {
+        color: $dark-gray-blue;
+    }
 }
 
+.dark-mode div {
+    background: $dark-desa-blue;
+
+    p:first-child {
+        color: $desa-blue;
+    }
+}
+
+//overview-today-cards for light mode
 .light-text {
     color: $dark-gray-blue;
+}
+
+.dark-text {
+    color: $white-bg;
+}
+
+// header section dark mode
+.dark-mode-hdr {
+    .header-text p{
+        color: $desa-blue;
+    }
+
+    .header-button p {
+        color: $desa-blue;
+    }
 }
 
 // GLOBAL UP RATINGS AND DOWN RATINGS STYLE 
@@ -208,7 +255,9 @@ body {
 			background: none;
 		}
 	}
-  
+    
+    //em's handle the size of the outside 
+    //%'s handle the inside of the toggle size
 	+ .tgl-btn {
 		outline: 0;
 		display: block;
@@ -225,7 +274,7 @@ body {
 			width: 43%;
 			height: 90%;
 		}
-    
+        // handles the position when colored
 		&:after {
             left: 2%;
             top: 3%;
@@ -235,7 +284,7 @@ body {
 			display: none;
 		}
 	}
-  
+    // handles position when grey
 	&:checked + .tgl-btn:after {
         left: 55%;
         top: 3%;
@@ -264,4 +313,71 @@ body {
 			transition: all .2s ease;
         }
 	}
+}
+
+// MEDIA QUERIES FOR Mobile: 375px ONLY since handling all screens would take days..
+@media only screen and (max-width: 375px) {
+    .desktop-light-v {
+        background: $white-bg;
+    }
+
+    .desktop-dark-v {
+        background: $very-dark-blue;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 1.5vh;
+
+        .header-text {
+            padding-bottom: 3%;
+            border-bottom: 1px solid $very-dark-blue;
+        }
+    }
+
+    // adding extra border at bottom for dark mode. 
+    .dark-mode-hdr .header-text {
+        border-bottom: 1px solid $dark-gray-blue;
+    }
+
+    .header-button {
+        justify-self: auto;
+        align-self: start;
+        padding-top: 2%;
+
+        .tgl-btn-text-light {
+            width: 100%;
+        }
+
+        #toggle-button {
+            justify-self: end;
+        }
+    }
+
+    .top-cards-container {
+        margin-top: -7%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-row-gap: 3vh;
+
+        .ig-card:before {
+            width: 80.1%;
+        }
+    }
+
+    .overview-cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-row-gap: 0;
+        // margin-bottom: 5%;
+
+        div:first-child p {
+            font-size: 1.7vh;
+        }
+
+        .card {
+            margin-bottom: 5%;
+        }
+    }
 }

@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <script src="./index.js"></script>
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
@@ -29,9 +31,15 @@
     
 
     <div class="header-button">
-      <input class="tgl tgl-light" id="cb1" type="checkbox" checked/>
-      <label class="tgl-btn" for="cb1"></label>
+      <p class="tgl-btn-text-light">Dark Mode</p>
+
+      <div id="toggle-button">
+        <input class="tgl tgl-light" id="cb1" type="checkbox" checked/>
+        <label class="tgl-btn" for="cb1"></label> 
+      </div>
+      
     </div>
+
   </div>
 
   <!-- Top Cards Section -->
@@ -82,7 +90,7 @@
   <section class="overview-cards-container light-mode">
     <div class="card">
       <div>
-        <p>Page Views</p>
+        <p id='test'>Page Views</p>
         <span>87</span>
       </div>
 
