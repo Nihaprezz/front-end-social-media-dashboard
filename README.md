@@ -12,7 +12,7 @@ Desktop Dark Mode:
 ![desktop dark mode](./finished-images/desktop-dark.png)
 
 Mobile Light Mode:
-![mobile light mode](./finished-images/mobile-dark.png)
+![mobile light mode](./finished-images/mobile-light.png)
 
 Mobile Dark mode:
 ![mobile dark mode](./finished-images/mobile-dark.png)
